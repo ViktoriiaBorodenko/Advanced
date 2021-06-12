@@ -5,13 +5,30 @@ const breadPrice = 90.2345;
 const maxPrice = Math.max(onionPrice, saloPrice, breadPrice);
 console.log("Max price - " + maxPrice);
 
-const minPrice = Math.min(onion, salo, bread);
-const sumAllthings = onion + salo + bread;
-const integSum = Math.trunc(onion) + Math.trunc(salo) + Math.trunc(bread);
-const roundedsum = 100 * Math.round(sumAllthings / 100);
-const roundingSumResult = integSum % 2 == 0;
-const restAfterPayment = customerMoney - sumAllthings;
-const averageAmount = sumAllthings / 3;
-const discount = Math.floor(Math.random() * 60) + 10;
-const priceDiscount = (sumAllthings - discount).toFixed();
-const profit = (sumAllthings / 2 - discount).toFixed();
+const minPrice = Math.min(onionPrice, saloPrice, breadPrice);
+console.log("Min price - " + minPrice);
+
+const totalSummSnacks = onionPrice + saloPrice + breadPrice;
+console.log(`Total price - ${totalSummSnacks}`);
+
+
+const totalSummInteger = Math.floor(onionPrice) + Math.floor(saloPrice) + Math.floor(breadPrice);
+console.log(`The sum of all delicacy - ${totalSummInteger}`);
+
+const roundedSummSnacks = Math.round(totalSummInteger / 100) * 100;
+console.log(roundedSummSnacks);
+
+const pairedNumber = Math.floor(totalSummInteger) % 2;
+console.log(totalSummInteger == 0);
+
+const customerPay = 500;
+console.log(`Rest - ${customerPay - totalSummSnacks}`);
+
+const meanPrice = Number((totalSummSnacks / 3).toFixed(2));
+console.log(`Mean Price ${meanPrice}`);
+
+const randomDiscount = Math.trunc(Math.random() * 100);
+const summDiscont = Number(totalSummSnacks * (randomDiscount / 100)).toFixed(2);
+const summToPay = Number(totalSummSnacks - summDiscont).toFixed(2)
+const netProfit = Number((totalSummSnacks / 2) - summDiscont).toFixed(2)
+console.log(`Net profit ${netProfit}`)
