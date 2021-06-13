@@ -28,7 +28,7 @@ const meanPrice = Number((totalSummSnacks / 3).toFixed(2));
 console.log(`Mean Price ${meanPrice}`);
 
 const randomDiscount = Math.trunc(Math.random() * 100);
-const summDiscont = Number(totalSummSnacks * (randomDiscount / 100)).toFixed(2);
-const summToPay = Number(totalSummSnacks - summDiscont).toFixed(2)
-const netProfit = Number((totalSummSnacks / 2) - summDiscont).toFixed(2)
+const summDiscount = Number(totalSummSnacks * (randomDiscount / 100)).toFixed(2);
+const summToPay = Number(totalSummSnacks - summDiscount).toFixed(2)
+const netProfit = Number((totalSummSnacks / 2) - summDiscount).toFixed(2)
 console.log(`Net profit ${netProfit}`)
