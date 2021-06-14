@@ -19,7 +19,7 @@ const roundedSummSnacks = Math.round(totalSummInteger / 100) * 100;
 console.log(roundedSummSnacks);
 
 const pairedNumber = Math.floor(totalSummInteger) % 2;
-console.log(totalSummInteger == 0);
+console.log(totalSummInteger === 0);
 
 const customerPay = 500;
 console.log(`Rest - ${customerPay - totalSummSnacks}`);
