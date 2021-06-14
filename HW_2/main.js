@@ -12,14 +12,14 @@ while (secondNumber == '' ||  !Number.isInteger(secondNumber)) {
 const minNumber = Math.min(firstNumber, secondNumber);
 const maxNumber = Math.max(firstNumber, secondNumber);
 
-let userChoice = confirm('Do you want to miss even numbers ?');
+const skipEvenNumber = confirm('Do you want to miss even numbers ?');
 let sum = 0;
 
     for (i = minNumber; i <= maxNumber; i++) {
-        if (i % 2 === 0 && userChoice) {
+        if (i % 2 === 0 && skipEvenNumber) {
             continue;
         }
-        sum+=i;
+        sum += i;
     }
 
 
