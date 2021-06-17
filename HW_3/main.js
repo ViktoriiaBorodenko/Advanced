@@ -1,5 +1,5 @@
 /*3*/
-const getUpperLetter = (nameHuman) => nameHuman[0].toUpperCase() + nameHuman.slice(1).toLocaleLowerCase();
+const getUpperLetter = nameHuman => nameHuman[0].toUpperCase() + nameHuman.slice(1).toLocaleLowerCase();
 
 /*6*/
 function countLetter(latterRepeat, worldInput) {
@@ -14,11 +14,11 @@ function getRandomPassword(lenPassword = 8) {
 }
 
 /*9*/
-let deleteLetters = (deleteLatter, str) => str.replace(new RegExp(deleteLatter, "gi"), '');
+const deleteLetters = (deleteLatter, str) => str.replace(new RegExp(deleteLatter, "gi"), '');
 
 /*10*/
 function isPalyndrom(phraseInput) {
-    let replaceSymbol = [" ", "!", "?", ",", ".", ":"];
+    const replaceSymbol = [" ", "!", "?", ",", ".", ":"];
     let filteredPhrase = '';
     for (let i = 0; i < phraseInput.length; i++) {
         if (!replaceSymbol.includes(phraseInput[i])) {
@@ -39,10 +39,10 @@ function deleteDuplicateLetter(sentenceInput) {
 }
 
 console.log(`
-Функція №3: ${getUpperLetter("оМЕЛЬКО")} <br>
-Функція №6: ${countLetter("а", "відчайдушний")} <br>
-Функція №8: ${getRandomPassword(8)} <br>
-Функція №9: ${deleteLetters('а', "абабагаламага")} <br>
-Функція №10: ${isPalyndrom("І мчу кіло бараболі Кучмі")} <br>
+Функція №3: ${getUpperLetter("оМЕЛЬКО")}
+Функція №6: ${countLetter("а", "відчайдушний")} 
+Функція №8: ${getRandomPassword(8)} 
+Функція №9: ${deleteLetters('а', "абабагаламага")} 
+Функція №10: ${isPalyndrom("І мчу кіло бараболі Кучмі")} 
 Функція №11: ${deleteDuplicateLetter("Отут буде кінець мого домашнього завдання")}`)
 
